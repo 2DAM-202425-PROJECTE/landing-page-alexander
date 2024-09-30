@@ -9,27 +9,28 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
         .section {
-            padding: 5rem 0;
+            padding: 3rem 0;
             border-bottom: 1px solid #e2e8f0;
         }
-        .section:nth-child(even) {
-            background-color: #f9fafb;
-        }
         .section-title {
-            font-size: 2rem;
+            font-size: 1.75rem;
             font-weight: bold;
             color: #1a202c;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
         }
         .section-description {
-            font-size: 1.125rem;
+            font-size: 1rem;
             color: #4a5568;
-            margin-bottom: 2.5rem;
+            margin-bottom: 2rem;
         }
         .chart-container {
-            width: 400px;
+            width: 100%;
+            max-width: 400px;
             margin: 0 auto;
         }
         .flex-center {
@@ -38,6 +39,33 @@
             align-items: center;
             gap: 2rem;
             flex-wrap: wrap;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .tech-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            padding: 1rem;
+            text-align: left;
+            max-width: 300px;
+        }
+        .tech-item {
+            background-color: #f1f5f9;
+            padding: 1rem;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #1a202c;
+        }
+        .tech-item strong {
+            color: #4a5568;
+        }
+        .tech-item span {
+            font-weight: bold;
+            color: #2d3748;
         }
     </style>
 </head>
@@ -45,14 +73,17 @@
 
 <!-- Header -->
 <header class="absolute inset-x-0 top-0 z-50">
-    <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
-        <div class="flex lg:flex-1">
+    <nav class="flex items-center justify-center p-6 lg:px-8" aria-label="Global">
+        <!-- Logo a l'esquerra -->
+        <div class="absolute left-6">
             <a href="#" class="-m-1.5 p-1.5">
                 <span class="sr-only">Your Company</span>
                 <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">
             </a>
         </div>
-        <div class="hidden lg:flex lg:gap-x-12">
+
+        <!-- Menú centrat -->
+        <div class="flex gap-x-12">
             <a href="aboutme.html" class="text-sm font-semibold leading-6 text-gray-900">Sobre Mi</a>
             <a href="pant.html" class="text-sm font-semibold leading-6 text-gray-900">Projectes Anteriors</a>
             <a href="index.html" class="text-sm font-semibold leading-6 text-gray-900">Home</a>
@@ -112,12 +143,24 @@
             <div class="chart-container">
                 <canvas id="techChart"></canvas>
             </div>
-            <ul class="list-disc text-left">
-                <li><strong>React:</strong> 35%</li>
-                <li><strong>Node.js:</strong> 30%</li>
-                <li><strong>Docker:</strong> 20%</li>
-                <li><strong>Kubernetes:</strong> 15%</li>
-            </ul>
+            <div class="tech-list">
+                <div class="tech-item">
+                    <strong>React</strong>
+                    <span>35%</span>
+                </div>
+                <div class="tech-item">
+                    <strong>Node.js</strong>
+                    <span>30%</span>
+                </div>
+                <div class="tech-item">
+                    <strong>Docker</strong>
+                    <span>20%</span>
+                </div>
+                <div class="tech-item">
+                    <strong>Kubernetes</strong>
+                    <span>15%</span>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -139,7 +182,10 @@
         options: {
             responsive: true,
             plugins: {
-                legend: { position: 'top' }
+                legend: {
+                    position: 'top',
+                    onClick: (e) => e.stopPropagation() // Desactiva la interacció de clic
+                }
             }
         }
     });
@@ -159,7 +205,10 @@
         options: {
             responsive: true,
             plugins: {
-                legend: { display: false },
+                legend: {
+                    display: false,
+                    onClick: (e) => e.stopPropagation() // Desactiva la interacció de clic
+                },
                 tooltip: {
                     callbacks: {
                         label: function(tooltipItem) {
@@ -192,7 +241,10 @@
         options: {
             responsive: true,
             plugins: {
-                legend: { position: 'top' }
+                legend: {
+                    position: 'top',
+                    onClick: (e) => e.stopPropagation() // Desactiva la interacció de clic
+                }
             }
         }
     });
@@ -213,7 +265,10 @@
         options: {
             responsive: true,
             plugins: {
-                legend: { position: 'top' }
+                legend: {
+                    position: 'top',
+                    onClick: (e) => e.stopPropagation() // Desactiva la interacció de clic
+                }
             }
         }
     });

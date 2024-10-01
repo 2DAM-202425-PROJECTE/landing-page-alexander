@@ -1,12 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!--<link rel="icon" type="image/svg+xml" href="/vite.svg" />-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="style.css" rel="stylesheet">
-    <title>Alexander Landding Page</title>
+    <title>Alexander Landing Page</title>
   </head> 
+
   <body>
     <script type="module" src="/main.js"></script>
     <div class="bg-white" x-data="{menuOpen: false}">
@@ -15,74 +15,101 @@
           <div class="flex lg:flex-1">
             <a href="#" class="-m-1.5 p-1.5">
               <span class="sr-only">Your Company</span>
-              <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">
+              <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="Logo">
             </a>
-          </div>
-          <div class="flex lg:hidden">
-            <button @click="menuOpen=true" type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
-              <span class="sr-only">Menú Principal</span>
-              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-              </svg>
-            </button>
           </div>
           <div class="hidden lg:flex lg:gap-x-12">
             <a href="aboutme.html" class="text-sm font-semibold leading-6 text-gray-900">Sobre Mi</a>
             <a href="pant.html" class="text-sm font-semibold leading-6 text-gray-900">Projectes Anteriors</a>
             <a href="cv.html" class="text-sm font-semibold leading-6 text-gray-900">Curriculum</a>
           </div>
-          <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="https://accounts.google.com/v3/signin/identifier?authuser=0&continue=https%3A%2F%2Fwww.google.com%2F&ec=GAlAmgQ&hl=ca&flowName=GlifWebSignIn&flowEntry=AddSession&dsh=S1245310301%3A1727112576662946&ddm=0" class="text-sm font-semibold leading-6 text-gray-900" target="_blank">Log in <span aria-hidden="true">&rarr;</span></a>
-          </div>
         </nav>
-        <!-- Mobile menu, show/hide based on menu open state. -->
-        <div x-show="menuOpen" class="lg:hidden" role="dialog" aria-modal="true">
-          <!-- Background backdrop, show/hide based on slide-over state. -->
-          <div class="fixed inset-0 z-50"></div>
-          <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-            <div class="flex items-center justify-between">
-              <a href="#" class="-m-1.5 p-1.5">
-                <span class="sr-only">Your Company</span>
-                <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">
-              </a>
-              <button @click="menuOpen=false" type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
-                <span class="sr-only">Close menu</span>
-                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-            </div>
-            <div class="mt-6 flow-root">
-              <div class="-my-6 divide-y divide-gray-500/10">
-                <div class="space-y-2 py-6">
-                  <a href="aboutme.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Sobre Mi</a>
-                  <a href="pant.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Projectes Anteriors</a>
-                  <a href="cv.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Curriculum</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </header>
 
-      <div class="relative isolate px-6 pt-14 lg:px-8">
-        <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
-          <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+      <div class="relative px-6 pt-14 lg:px-8">
+        <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56 text-center">
+          <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">ALEXANDER BELTRAN FERRERS</h1>
+          <p class="mt-6 text-lg leading-8 text-gray-600">Professional del software. Solucions back i front-end per a particulars i empreses.</p>
+          <div class="mt-10 flex items-center justify-center gap-x-6">
+            <a href="https://es.linkedin.com" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500">Contacta</a>
+            <a href="aboutme.html" class="text-sm font-semibold leading-6 text-gray-900">Learn more →</a>
+          </div>
         </div>
-        <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-          <div class="text-center">
-            <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">ALEXANDER BELTRAN FERRERS</h1>
-            <p class="mt-6 text-lg leading-8 text-gray-600">Software Professional, Back-front end.</p>
-            <div class="mt-10 flex items-center justify-center gap-x-6">
-              <a href="https://es.linkedin.com/?src=go-pa&trk=sem-ga_campid.18146679037_asid.140850334975_crid.694860685343_kw.linkedin_d.c_tid.kwd-148086543_n.g_mt.e_geo.9049225&mcid=6968657504633266178&cid=&gad_source=1&gclid=Cj0KCQjwo8S3BhDeARIsAFRmkONCIrlbe_usFKEywuHEl6fKG5sCC2r6NRJ_WkEj3Wg4SadxEfqBnccaAgt3EALw_wcB&gclsrc=aw.ds" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" target="_blank">Contacta</a>
-              <a href="aboutme.html" class="text-sm font-semibold leading-6 text-gray-900">Learn more <span aria-hidden="true">→</span></a>
+
+        <!-- SECCIÓ DE PLANS -->
+        <div class="mx-auto max-w-4xl text-center">
+          <h2 class="text-3xl font-bold text-gray-900">Tria el teu pla</h2>
+          <p class="mt-4 text-lg text-gray-600">Oferim solucions per a qualsevol mida de negoci. Tria el pla que millor s'adapti a tu.</p>
+          <div class="mt-10 flex justify-center gap-8">
+            <!-- Pla Bàsic -->
+            <div class="border rounded-lg p-6 max-w-xs shadow-md">
+              <h3 class="text-2xl font-semibold text-gray-900">Pla Bàsic</h3>
+              <p class="mt-4 text-lg text-gray-600">Ideal per a individus.</p>
+              <p class="mt-4 text-xl font-bold text-gray-900">100€ / mes</p>
+              <ul class="mt-4 text-left text-gray-600">
+                <li>✔️ Desenvolupament d'aplicació personalitzada</li>
+                <li>✔️ Suport tècnic bàsic</li>
+                <li>✔️ Fins a 2 revisions</li>
+              </ul>
+              <a href="#" class="mt-6 inline-block rounded-md bg-indigo-600 px-5 py-2.5 text-white">Comença ara</a>
+            </div>
+
+            <!-- Pla Empresa -->
+            <div class="border rounded-lg p-6 max-w-xs shadow-md">
+              <h3 class="text-2xl font-semibold text-gray-900">Pla Empresa</h3>
+              <p class="mt-4 text-lg text-gray-600">Ideal per a petites empreses.</p>
+              <p class="mt-4 text-xl font-bold text-gray-900">300€ / mes</p>
+              <ul class="mt-4 text-left text-gray-600">
+                <li>✔️ Aplicacions per a equips</li>
+                <li>✔️ Suport prioritari</li>
+                <li>✔️ Fins a 5 revisions</li>
+              </ul>
+              <a href="#" class="mt-6 inline-block rounded-md bg-indigo-600 px-5 py-2.5 text-white">Comença ara</a>
+            </div>
+
+            <!-- Pla Corporatiu -->
+            <div class="border rounded-lg p-6 max-w-xs shadow-md">
+              <h3 class="text-2xl font-semibold text-gray-900">Pla Corporatiu</h3>
+              <p class="mt-4 text-lg text-gray-600">Per a grans empreses.</p>
+              <p class="mt-4 text-xl font-bold text-gray-900">500€ / mes</p>
+              <ul class="mt-4 text-left text-gray-600">
+                <li>✔️ Solucions a mida</li>
+                <li>✔️ Suport dedicat 24/7</li>
+                <li>✔️ Revisions il·limitades</li>
+              </ul>
+              <a href="#" class="mt-6 inline-block rounded-md bg-indigo-600 px-5 py-2.5 text-white">Comença ara</a>
             </div>
           </div>
         </div>
-        <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true">
-          <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+
+        <!-- SECCIÓ DE TESTIMONIS -->
+        <div class="mt-16 text-center">
+          <h2 class="text-3xl font-bold text-gray-900">Què diuen els nostres clients</h2>
+          <p class="mt-4 text-lg text-gray-600">Descobreix l'experiència dels qui ja han confiat en nosaltres.</p>
+          <div class="mt-10 flex justify-center gap-8">
+            <div class="max-w-xs">
+              <p class="text-gray-600">"El servei és excel·lent. Alexander ha creat una aplicació que ha transformat el nostre negoci!"</p>
+              <p class="mt-4 text-sm text-gray-900">— Marta P., CEO d'una startup</p>
+            </div>
+            <div class="max-w-xs">
+              <p class="text-gray-600">"Atenció personalitzada i solucions a mida. Molt recomanat!"</p>
+              <p class="mt-4 text-sm text-gray-900">— Joan G., Director de Màrqueting</p>
+            </div>
+            <div class="max-w-xs">
+              <p class="text-gray-600">"Els millors professionals amb qui hem treballat. Ens han ajudat a créixer!"</p>
+              <p class="mt-4 text-sm text-gray-900">— Anna F., Directora General</p>
+            </div>
+          </div>
         </div>
-        <h1>PROVA QUE S'ACTUALITZA LA PÀGINA COM TOCA</h1>
+
+        <!-- SECCIÓ FINAL DE CRIDA A L'ACCIÓ -->
+        <div class="mt-16 text-center">
+          <h2 class="text-3xl font-bold text-gray-900">Contacta'ns avui mateix!</h2>
+          <p class="mt-4 text-lg text-gray-600">Truca'ns o envia un correu per començar a treballar en la teva aplicació personalitzada.</p>
+          <div class="mt-10">
+            <a href="mailto:contact@alexanderapp.com" class="rounded-md bg-indigo-600 px-5 py-3 text-sm font-semibold text-white">Envia'ns un correu</a>
+          </div>
+        </div>
       </div>
     </div>
   </body>

@@ -1,3 +1,64 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.section {
+    padding: 3rem 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+.section-title {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #1a202c;
+    margin-bottom: 1rem;
+}
+.section-description {
+    font-size: 1rem;
+    color: #4a5568;
+    margin-bottom: 2rem;
+}
+.chart-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.tech-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding: 1rem;
+    text-align: left;
+    max-width: 300px;
+}
+.tech-item {
+    background-color: #f1f5f9;
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #1a202c;
+}
+.tech-item strong {
+    color: #4a5568;
+}
+.tech-item span {
+    font-weight: bold;
+    color: #2d3748;
+}

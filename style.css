@@ -9,78 +9,81 @@ body {
     box-sizing: border-box;
 }
 
-/* Paleta de colors basada en el logo */
+/* Paleta de colores basada en el logo */
 :root {
-  --primary-gradient-start: #00FFFF;
-  --primary-gradient-end: #FF80B5;
-  --secondary-color: #9089FC;
-  --background-color: #0f0e17; /* Fons gairebé negre */
-  --text-color-light: #ffffff; /* Blanc pel text */
-  --accent-color: #00FFFF; /* Color d'accent cian */
+    --primary-gradient-start: #EADFFF; /* Color inicial del degradado (lila claro) */
+    --primary-gradient-end: #B09EDC; /* Color final del degradado (violeta claro) */
+    --secondary-color: #A67CBE; /* Color secundari (morado suave) */
+    --background-color: #1A1A2E; /* Fondo oscuro pero no negro */
+    --text-color-light: #ffffff; /* Blanco para el texto */
+    --accent-color: #A67CBE; /* Color de acento morado */
+    --border-color: rgba(255, 255, 255, 0.1); /* Color de borde suave */
 }
 
 body {
-  background-color: var(--background-color);
-  color: var(--text-color-light);
+    background-color: var(--background-color);
+    color: var(--text-color-light);
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: var(--text-color-light);
+    color: var(--text-color-light);
 }
 
 a {
-  color: var(--accent-color);
-  transition: color 0.3s ease;
+    color: var(--accent-color);
+    transition: color 0.3s ease;
 }
 
 a:hover {
-  color: var(--primary-gradient-end);
+    color: var(--primary-gradient-end);
 }
 
 button, .btn-primary {
-  background: linear-gradient(90deg, var(--primary-gradient-start), var(--primary-gradient-end));
-  color: white;
-  border-radius: 8px;
-  padding: 10px 20px;
-  text-transform: uppercase;
-  transition: background 0.3s ease;
+    background: linear-gradient(90deg, var(--primary-gradient-start), var(--primary-gradient-end));
+    color: white;
+    border-radius: 8px;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    transition: background 0.3s ease, transform 0.2s ease;
 }
 
 button:hover, .btn-primary:hover {
-  background: var(--primary-gradient-end);
+    background: var(--primary-gradient-end);
+    transform: translateY(-2px); /* Efecto de elevación */
 }
 
 footer {
-  background: linear-gradient(to right, var(--primary-gradient-start), var(--primary-gradient-end));
+    background: linear-gradient(to right, var(--primary-gradient-start), var(--primary-gradient-end));
 }
 
-/* Seccions i títols */
+/* Secciones y títulos */
 .section {
     padding: 3rem 0;
-    border-bottom: 1px solid #e2e8f0;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .section-title {
     font-size: 1.75rem;
     font-weight: bold;
-    color: var(--text-color-light); /* Color blanc per a concordar amb el tema del logo */
+    color: var(--text-color-light);
     margin-bottom: 1rem;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); /* Sombra de texto */
 }
 
 .section-description {
     font-size: 1rem;
-    color: #4a5568; /* Mantinc aquest color perquè ofereix un bon contrast amb el fons fosc */
+    color: #E0E0E0; /* Gris suave para una mejor legibilidad */
     margin-bottom: 2rem;
 }
 
-/* Contenidor de gràfics */
+/* Contenedor de gráficos */
 .chart-container {
     width: 100%;
     max-width: 400px;
     margin: 0 auto;
 }
 
-/* Centrat flex */
+/* Centrado flex */
 .flex-center {
     display: flex;
     justify-content: center;
@@ -91,7 +94,7 @@ footer {
     margin: 0 auto;
 }
 
-/* Llista de tecnologies */
+/* Lista de tecnologías */
 .tech-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -101,23 +104,29 @@ footer {
     max-width: 300px;
 }
 
-/* Element de la llista de tecnologies */
+/* Elemento de la lista de tecnologías */
 .tech-item {
-    background-color: #f1f5f9;
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo claro y suave */
     padding: 1rem;
     border-radius: 8px;
     display: flex;
     justify-content: space-between;
     font-size: 1rem;
     font-weight: 500;
-    color: #1a202c;
+    color: var(--text-color-light);
+    transition: background 0.3s ease, transform 0.3s ease; /* Transición suave */
+}
+
+.tech-item:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Cambio de fondo al pasar el ratón */
+    transform: translateY(-2px); /* Efecto de elevación */
 }
 
 .tech-item strong {
-    color: #4a5568;
+    color: var(--secondary-color);
 }
 
 .tech-item span {
     font-weight: bold;
-    color: #2d3748;
+    color: #E0E0E0; /* Color gris suave */
 }

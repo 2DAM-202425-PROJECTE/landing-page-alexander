@@ -8,26 +8,79 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
+
+/* Paleta de colors basada en el logo */
+:root {
+  --primary-gradient-start: #00FFFF;
+  --primary-gradient-end: #FF80B5;
+  --secondary-color: #9089FC;
+  --background-color: #0f0e17; /* Fons gairebé negre */
+  --text-color-light: #ffffff; /* Blanc pel text */
+  --accent-color: #00FFFF; /* Color d'accent cian */
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color-light);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-color-light);
+}
+
+a {
+  color: var(--accent-color);
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--primary-gradient-end);
+}
+
+button, .btn-primary {
+  background: linear-gradient(90deg, var(--primary-gradient-start), var(--primary-gradient-end));
+  color: white;
+  border-radius: 8px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  transition: background 0.3s ease;
+}
+
+button:hover, .btn-primary:hover {
+  background: var(--primary-gradient-end);
+}
+
+footer {
+  background: linear-gradient(to right, var(--primary-gradient-start), var(--primary-gradient-end));
+}
+
+/* Seccions i títols */
 .section {
     padding: 3rem 0;
     border-bottom: 1px solid #e2e8f0;
 }
+
 .section-title {
     font-size: 1.75rem;
     font-weight: bold;
-    color: #1a202c;
+    color: var(--text-color-light); /* Color blanc per a concordar amb el tema del logo */
     margin-bottom: 1rem;
 }
+
 .section-description {
     font-size: 1rem;
-    color: #4a5568;
+    color: #4a5568; /* Mantinc aquest color perquè ofereix un bon contrast amb el fons fosc */
     margin-bottom: 2rem;
 }
+
+/* Contenidor de gràfics */
 .chart-container {
     width: 100%;
     max-width: 400px;
     margin: 0 auto;
 }
+
+/* Centrat flex */
 .flex-center {
     display: flex;
     justify-content: center;
@@ -37,6 +90,8 @@ body {
     max-width: 900px;
     margin: 0 auto;
 }
+
+/* Llista de tecnologies */
 .tech-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -45,6 +100,8 @@ body {
     text-align: left;
     max-width: 300px;
 }
+
+/* Element de la llista de tecnologies */
 .tech-item {
     background-color: #f1f5f9;
     padding: 1rem;
@@ -55,9 +112,11 @@ body {
     font-weight: 500;
     color: #1a202c;
 }
+
 .tech-item strong {
     color: #4a5568;
 }
+
 .tech-item span {
     font-weight: bold;
     color: #2d3748;

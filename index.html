@@ -1,116 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--<link href="style.css" rel="stylesheet">-->
+    <link href="style.css" rel="stylesheet">
     <title>Alexander Landing Page</title>
-  </head> 
-
-  <body class="bg-[#0f0e17] text-white">
+</head>
+<body>
     <script type="module" src="/main.js"></script>
     <div class="relative" x-data="{menuOpen: false}">
-      <header class="absolute inset-x-0 top-0 z-50">
-        <nav class="flex items-center justify-between p-6 lg:px-8">
-          <div class="flex lg:flex-1">
-            <a href="#" class="-m-1.5 p-1.5">
-              <img class="h-24 w-auto" src="Images/Logo.png" alt="Logo">
-            </a>
-          </div>
-          <div class="hidden lg:flex lg:gap-x-12">
-            <a href="aboutme.html" class="text-sm font-semibold text-white hover:text-[#00FFFF]">OFERTES</a>
-            <a href="pant.html" class="text-sm font-semibold text-white hover:text-[#00FFFF]">REFERÈNCIES</a>
-            <a href="cv.html" class="text-sm font-semibold text-white hover:text-[#00FFFF]">CONTACTAN'S</a>
-          </div>
-        </nav>
-      </header>
+        <header class="absolute inset-x-0 top-0 z-50">
+            <nav class="flex items-center justify-between p-6 lg:px-8">
+                <div class="flex lg:flex-1">
+                    <a href="#" class="-m-1.5 p-1.5">
+                        <img class="h-24 w-auto" src="Images/Logo.png" alt="Logo">
+                    </a>
+                </div>
+                <div class="hidden lg:flex lg:gap-x-12">
+                    <a href="aboutme.html" class="text-sm font-semibold hover:text-[#FF80B5]">OFERTES</a>
+                    <a href="pant.html" class="text-sm font-semibold hover:text-[#FF80B5]">REFERÈNCIES</a>
+                    <a href="cv.html" class="text-sm font-semibold hover:text-[#FF80B5]">CONTACTAN'S</a>
+                </div>
+            </nav>
+        </header>
 
-      <div class="relative px-6 pt-14 lg:px-8">
-        <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56 text-center">
-          <h1 class="text-5xl font-bold tracking-tight text-white sm:text-6xl animate-pulse">MAKELELE</h1>
-          <p class="mt-6 text-lg leading-8 text-gray-300">Professional del software. Solucions back i front-end per a particulars i empreses.</p>
-          <div class="mt-10 flex items-center justify-center gap-x-6">
-            <a href="https://es.linkedin.com" class="rounded-md bg-gradient-to-r from-[#00FFFF] to-[#FF80B5] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:shadow-lg transition-shadow duration-300">Contacta</a>
-            <a href="aboutme.html" class="text-sm font-semibold text-[#00FFFF] hover:text-[#FF80B5]">Learn more →</a>
-          </div>
+        <div class="relative px-6 pt-14 lg:px-8">
+            <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56 text-center">
+                <h1 class="text-5xl font-bold tracking-tight animate-pulse">MAKELELE</h1>
+                <p class="mt-6 text-lg leading-8 text-gray-300">Professional del software. Solucions back i front-end per a particulars i empreses.</p>
+                <div class="mt-10 flex items-center justify-center gap-x-6">
+                    <a href="https://es.linkedin.com" class="rounded-md px-3.5 py-2.5 text-sm font-semibold shadow-sm hover:shadow-lg">Contacta</a>
+                    <a href="aboutme.html" class="text-sm font-semibold hover:text-[#FF80B5]">Learn more →</a>
+                </div>
+            </div>
+
+            <!-- SECCIÓ DE PLANS -->
+            <div class="mx-auto max-w-4xl text-center">
+                <h2 class="text-3xl font-bold animate-fade-in">Tria el teu pla</h2>
+                <p class="mt-4 text-lg text-gray-300 animate-fade-in">Oferim solucions per a qualsevol mida de negoci. Tria el pla que millor s'adapti a tu.</p>
+                <div class="mt-10 flex justify-center gap-8">
+                    <!-- Pla Bàsic -->
+                    <div class="plan p-6 max-w-xs transition-transform duration-300">
+                        <h3 class="text-2xl font-semibold">Pla Bàsic</h3>
+                        <p class="mt-4 text-lg">Ideal per a individus.</p>
+                        <p class="mt-4 text-xl font-bold">100€ / mes</p>
+                        <ul class="mt-4 text-left">
+                            <li>✔️ Desenvolupament d'aplicació personalitzada</li>
+                            <li>✔️ Suport tècnic bàsic</li>
+                            <li>✔️ Fins a 2 revisions</li>
+                        </ul>
+                        <a href="#" class="mt-6 inline-block rounded-md bg-gradient-to-r from-[#00FFFF] to-[#FF80B5] px-5 py-2.5">Comença ara</a>
+                    </div>
+
+                    <!-- Pla Empresa -->
+                    <div class="plan p-6 max-w-xs transition-transform duration-300">
+                        <h3 class="text-2xl font-semibold">Pla Empresa</h3>
+                        <p class="mt-4 text-lg">Ideal per a petites empreses.</p>
+                        <p class="mt-4 text-xl font-bold">300€ / mes</p>
+                        <ul class="mt-4 text-left">
+                            <li>✔️ Aplicacions per a equips</li>
+                            <li>✔️ Suport prioritari</li>
+                            <li>✔️ Fins a 5 revisions</li>
+                        </ul>
+                        <a href="#" class="mt-6 inline-block rounded-md bg-gradient-to-r from-[#00FFFF] to-[#FF80B5] px-5 py-2.5">Comença ara</a>
+                    </div>
+
+                    <!-- Pla Corporatiu -->
+                    <div class="plan p-6 max-w-xs transition-transform duration-300">
+                        <h3 class="text-2xl font-semibold">Pla Corporatiu</h3>
+                        <p class="mt-4 text-lg">Per a grans empreses.</p>
+                        <p class="mt-4 text-xl font-bold">500€ / mes</p>
+                        <ul class="mt-4 text-left">
+                            <li>✔️ Solucions a mida</li>
+                            <li>✔️ Suport dedicat 24/7</li>
+                            <li>✔️ Revisions il·limitades</li>
+                        </ul>
+                        <a href="#" class="mt-6 inline-block rounded-md bg-gradient-to-r from-[#00FFFF] to-[#FF80B5] px-5 py-2.5">Comença ara</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECCIÓ FINAL DE CRIDA A L'ACCIÓ -->
+            <div class="mt-16 text-center">
+                <h2 class="text-3xl font-bold">Contacta'ns avui mateix!</h2>
+                <p class="mt-4 text-lg text-gray-300">Truca'ns o envia un correu per començar a treballar en la teva aplicació personalitzada.</p>
+                <div class="mt-10">
+                    <a href="mailto:contact@alexanderapp.com" class="rounded-md bg-gradient-to-r from-[#00FFFF] to-[#FF80B5] px-5 py-3 text-sm font-semibold">Envia'ns un correu</a>
+                </div>
+            </div>
+
+            <!-- PEU DE PÀGINA -->
+            <footer class="mt-16">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h3 class="text-xl font-bold">Segueix-nos a les xarxes socials!</h3>
+                    <div class="mt-4 flex justify-center gap-8">
+                        <a href="https://www.instagram.com" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="h-8 w-8 hover:scale-125 transition-transform duration-300">
+                        </a>
+                        <a href="https://www.linkedin.com" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/LinkedIn_Logo.png" alt="LinkedIn" class="h-8 w-8 hover:scale-125 transition-transform duration-300">
+                        </a>
+                        <a href="https://twitter.com" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/en/6/60/Twitter_bird_logo_2012.svg" alt="Twitter" class="h-8 w-8 hover:scale-125 transition-transform duration-300">
+                        </a>
+                        <a href="https://www.facebook.com" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" class="h-8 w-8 hover:scale-125 transition-transform duration-300">
+                        </a>
+                    </div>
+                </div>
+            </footer>
         </div>
-
-        <!-- SECCIÓ DE PLANS -->
-        <div class="mx-auto max-w-4xl text-center">
-          <h2 class="text-3xl font-bold text-white">Tria el teu pla</h2>
-          <p class="mt-4 text-lg text-gray-300">Oferim solucions per a qualsevol mida de negoci. Tria el pla que millor s'adapti a tu.</p>
-          <div class="mt-10 flex justify-center gap-8">
-            <!-- Pla Bàsic -->
-            <div class="border rounded-lg p-6 max-w-xs shadow-lg transition-transform duration-300 transform hover:scale-105 bg-[#1a1a2e]">
-              <h3 class="text-2xl font-semibold text-white">Pla Bàsic</h3>
-              <p class="mt-4 text-lg text-gray-300">Ideal per a individus.</p>
-              <p class="mt-4 text-xl font-bold text-white">100€ / mes</p>
-              <ul class="mt-4 text-left text-gray-400">
-                <li>✔️ Desenvolupament d'aplicació personalitzada</li>
-                <li>✔️ Suport tècnic bàsic</li>
-                <li>✔️ Fins a 2 revisions</li>
-              </ul>
-              <a href="#" class="mt-6 inline-block rounded-md bg-gradient-to-r from-[#00FFFF] to-[#FF80B5] px-5 py-2.5 text-white hover:shadow-lg transition-shadow duration-300">Comença ara</a>
-            </div>
-
-            <!-- Pla Empresa -->
-            <div class="border rounded-lg p-6 max-w-xs shadow-lg transition-transform duration-300 transform hover:scale-105 bg-[#1a1a2e]">
-              <h3 class="text-2xl font-semibold text-white">Pla Empresa</h3>
-              <p class="mt-4 text-lg text-gray-300">Ideal per a petites empreses.</p>
-              <p class="mt-4 text-xl font-bold text-white">300€ / mes</p>
-              <ul class="mt-4 text-left text-gray-400">
-                <li>✔️ Aplicacions per a equips</li>
-                <li>✔️ Suport prioritari</li>
-                <li>✔️ Fins a 5 revisions</li>
-              </ul>
-              <a href="#" class="mt-6 inline-block rounded-md bg-gradient-to-r from-[#00FFFF] to-[#FF80B5] px-5 py-2.5 text-white hover:shadow-lg transition-shadow duration-300">Comença ara</a>
-            </div>
-
-            <!-- Pla Corporatiu -->
-            <div class="border rounded-lg p-6 max-w-xs shadow-lg transition-transform duration-300 transform hover:scale-105 bg-[#1a1a2e]">
-              <h3 class="text-2xl font-semibold text-white">Pla Corporatiu</h3>
-              <p class="mt-4 text-lg text-gray-300">Per a grans empreses.</p>
-              <p class="mt-4 text-xl font-bold text-white">500€ / mes</p>
-              <ul class="mt-4 text-left text-gray-400">
-                <li>✔️ Solucions a mida</li>
-                <li>✔️ Suport dedicat 24/7</li>
-                <li>✔️ Revisions il·limitades</li>
-              </ul>
-              <a href="#" class="mt-6 inline-block rounded-md bg-gradient-to-r from-[#00FFFF] to-[#FF80B5] px-5 py-2.5 text-white hover:shadow-lg transition-shadow duration-300">Comença ara</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- SECCIÓ FINAL DE CRIDA A L'ACCIÓ -->
-        <div class="mt-16 text-center">
-          <h2 class="text-3xl font-bold text-white">Contacta'ns avui mateix!</h2>
-          <p class="mt-4 text-lg text-gray-300">Truca'ns o envia un correu per començar a treballar en la teva aplicació personalitzada.</p>
-          <div class="mt-10">
-            <a href="mailto:contact@alexanderapp.com" class="rounded-md bg-gradient-to-r from-[#00FFFF] to-[#FF80B5] px-5 py-3 text-sm font-semibold text-white hover:shadow-lg transition-shadow duration-300">Envia'ns un correu</a>
-          </div>
-        </div>
-
-        <!-- PEU DE PÀGINA -->
-        <footer class="mt-16 bg-gradient-to-tr from-[#00FFFF] to-[#FF80B5] p-6">
-          <div class="max-w-4xl mx-auto text-center">
-            <h3 class="text-xl font-bold text-white">Segueix-nos a les xarxes socials!</h3>
-            <div class="mt-4 flex justify-center gap-8">
-              <a href="https://www.instagram.com" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="h-8 w-8 hover:scale-125 transition-transform duration-300">
-              </a>
-              <a href="https://www.linkedin.com" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/LinkedIn_Logo.png" alt="LinkedIn" class="h-8 w-8 hover:scale-125 transition-transform duration-300">
-              </a>
-              <a href="https://twitter.com" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/en/6/60/Twitter_bird_logo_2012.svg" alt="Twitter" class="h-8 w-8 hover:scale-125 transition-transform duration-300">
-              </a>
-              <a href="https://www.facebook.com" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" class="h-8 w-8 hover:scale-125 transition-transform duration-300">
-              </a>
-            </div>
-          </div>
-        </footer>
-      </div>
     </div>
-  </body>
+</body>
 </html>

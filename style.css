@@ -7,126 +7,59 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #1A1A2E; /* Fondo oscuro pero no negro */
+    color: white; /* Color de texto general */
 }
-
-/* Paleta de colores basada en el logo */
-:root {
-    --primary-gradient-start: #EADFFF; /* Color inicial del degradado (lila claro) */
-    --primary-gradient-end: #B09EDC; /* Color final del degradado (violeta claro) */
-    --secondary-color: #A67CBE; /* Color secundari (morado suave) */
-    --background-color: #1A1A2E; /* Fondo oscuro pero no negro */
-    --text-color-light: #ffffff; /* Blanco para el texto */
-    --accent-color: #A67CBE; /* Color de acento morado */
-    --border-color: rgba(255, 255, 255, 0.1); /* Color de borde suave */
-}
-
-body {
-    background-color: var(--background-color);
-    color: var(--text-color-light);
-}
-
 h1, h2, h3, h4, h5, h6 {
-    color: var(--text-color-light);
+    color: white; /* Color de títulos */
 }
-
 a {
-    color: var(--accent-color);
+    color: #A67CBE; /* Color de enlace */
     transition: color 0.3s ease;
 }
-
 a:hover {
-    color: var(--primary-gradient-end);
+    color: #FF80B5; /* Color al pasar el ratón */
 }
-
+/* Botones */
 button, .btn-primary {
-    background: linear-gradient(90deg, var(--primary-gradient-start), var(--primary-gradient-end));
+    background: linear-gradient(90deg, #EADFFF, #B09EDC);
     color: white;
     border-radius: 8px;
     padding: 10px 20px;
     text-transform: uppercase;
     transition: background 0.3s ease, transform 0.2s ease;
 }
-
 button:hover, .btn-primary:hover {
-    background: var(--primary-gradient-end);
+    background: #B09EDC; /* Color al pasar el ratón */
     transform: translateY(-2px); /* Efecto de elevación */
 }
-
+/* Planes */
+.plan {
+    border-radius: 10px;
+    background: #1A1A2E;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.plan:hover {
+    transform: scale(1.05); /* Efecto de escalado */
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5); /* Aumentar sombra */
+}
+/* Footer */
 footer {
-    background: linear-gradient(to right, var(--primary-gradient-start), var(--primary-gradient-end));
+    background: linear-gradient(to right, #EADFFF, #B09EDC);
+    padding: 20px;
 }
-
-/* Secciones y títulos */
-.section {
-    padding: 3rem 0;
-    border-bottom: 1px solid var(--border-color);
+/* Animaciones */
+.animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out forwards;
 }
-
-.section-title {
-    font-size: 1.75rem;
-    font-weight: bold;
-    color: var(--text-color-light);
-    margin-bottom: 1rem;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); /* Sombra de texto */
-}
-
-.section-description {
-    font-size: 1rem;
-    color: #E0E0E0; /* Gris suave para una mejor legibilidad */
-    margin-bottom: 2rem;
-}
-
-/* Contenedor de gráficos */
-.chart-container {
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
-}
-
-/* Centrado flex */
-.flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-/* Lista de tecnologías */
-.tech-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    padding: 1rem;
-    text-align: left;
-    max-width: 300px;
-}
-
-/* Elemento de la lista de tecnologías */
-.tech-item {
-    background-color: rgba(255, 255, 255, 0.1); /* Fondo claro y suave */
-    padding: 1rem;
-    border-radius: 8px;
-    display: flex;
-    justify-content: space-between;
-    font-size: 1rem;
-    font-weight: 500;
-    color: var(--text-color-light);
-    transition: background 0.3s ease, transform 0.3s ease; /* Transición suave */
-}
-
-.tech-item:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Cambio de fondo al pasar el ratón */
-    transform: translateY(-2px); /* Efecto de elevación */
-}
-
-.tech-item strong {
-    color: var(--secondary-color);
-}
-
-.tech-item span {
-    font-weight: bold;
-    color: #E0E0E0; /* Color gris suave */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

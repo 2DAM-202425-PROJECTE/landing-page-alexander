@@ -8,7 +8,7 @@
 </head>
 <body>
     <script type="module" src="/main.js"></script>
-    <div class="relative" x-data="{menuOpen: false}">
+    <div class="relative">
         <header class="absolute inset-x-0 top-0 z-50">
             <nav class="flex items-center justify-between p-6 lg:px-8">
                 <div class="flex lg:flex-1">
@@ -50,7 +50,7 @@
                             <li>✔️ Suport tècnic bàsic</li>
                             <li>✔️ Fins a 2 revisions</li>
                         </ul>
-                        <a href="#" class="mt-6 inline-block rounded-md bg-gradient-to-r from-[#00FFFF] to-[#FF80B5] px-5 py-2.5">Comença ara</a>
+                        <a href="#" class="mt-6 inline-block rounded-md bg-gradient-to-r from-[#FF80B5] to-[#00FFFF] px-5 py-2.5">Comença ara</a>
                     </div>
 
                     <!-- Pla Empresa -->
@@ -64,7 +64,7 @@
                             <li>✔️ Suport prioritari</li>
                             <li>✔️ Fins a 5 revisions</li>
                         </ul>
-                        <a href="#" class="mt-6 inline-block rounded-md bg-gradient-to-r from-[#00FFFF] to-[#FF80B5] px-5 py-2.5">Comença ara</a>
+                        <a href="#" class="mt-6 inline-block rounded-md bg-gradient-to-r from-[#FF80B5] to-[#00FFFF] px-5 py-2.5">Comença ara</a>
                     </div>
 
                     <!-- Pla Corporatiu -->
@@ -78,9 +78,23 @@
                             <li>✔️ Suport dedicat 24/7</li>
                             <li>✔️ Revisions il·limitades</li>
                         </ul>
-                        <a href="#" class="mt-6 inline-block rounded-md bg-gradient-to-r from-[#00FFFF] to-[#FF80B5] px-5 py-2.5">Comença ara</a>
+                        <a href="#" class="mt-6 inline-block rounded-md bg-gradient-to-r from-[#FF80B5] to-[#00FFFF] px-5 py-2.5">Comença ara</a>
                     </div>
                 </div>
+            </div>
+
+            <!-- CARROUSSEL DE PROJECTES ANTERIORS -->
+            <div class="carousel-container mt-20">
+                <h2 class="text-3xl font-bold text-center">Projectes Anteriors</h2>
+                <div class="carousel">
+                    <div class="carousel-track">
+                        <div class="carousel-item"><img src="Images/project1.jpg" alt="Projecte 1"></div>
+                        <div class="carousel-item"><img src="Images/project2.jpg" alt="Projecte 2"></div>
+                        <div class="carousel-item"><img src="Images/project3.jpg" alt="Projecte 3"></div>
+                    </div>
+                </div>
+                <button class="carousel-button left">‹</button>
+                <button class="carousel-button right">›</button>
             </div>
 
             <!-- SECCIÓ FINAL DE CRIDA A L'ACCIÓ -->
@@ -88,7 +102,7 @@
                 <h2 class="text-3xl font-bold">Contacta'ns avui mateix!!</h2>
                 <p class="mt-4 text-lg text-gray-300">Truca'ns o envia un correu per començar a treballar en la teva aplicació personalitzada.</p>
                 <div class="mt-10">
-                    <a href="mailto:contact@alexanderapp.com" class="rounded-md bg-gradient-to-r from-[#00FFFF] to-[#FF80B5] px-5 py-3 text-sm font-semibold">Envia'ns un correu</a>
+                    <a href="mailto:contact@alexanderapp.com" class="rounded-md bg-gradient-to-r from-[#FF80B5] to-[#00FFFF] px-5 py-3 text-sm font-semibold">Envia'ns un correu</a>
                 </div>
             </div>
 
@@ -114,5 +128,31 @@
             </footer>
         </div>
     </div>
+
+    <script>
+        const carousel = document.querySelector('.carousel');
+        const track = document.querySelector('.carousel-track');
+        const items = Array.from(track.children);
+        const prevButton = document.querySelector('.carousel-button.left');
+        const nextButton = document.querySelector('.carousel-button.right');
+        let currentIndex = 0;
+
+        function updateCarousel() {
+            const width = items[0].getBoundingClientRect().width;
+            track.style.transform = `translateX(-${currentIndex * width}px)`;
+        }
+
+        nextButton.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % items.length;
+            updateCarousel();
+        });
+
+        prevButton.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + items.length) % items.length;
+            updateCarousel();
+        });
+
+        window.addEventListener('resize', updateCarousel);
+    </script>
 </body>
 </html>

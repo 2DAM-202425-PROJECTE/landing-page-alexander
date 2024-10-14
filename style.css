@@ -7,32 +7,38 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #1A1A2E; /* Fondo oscuro pero no negro */
-    color: white; /* Color de texto general */
+    background-color: #1A1A2E;
+    color: white;
 }
+
 h1, h2, h3, h4, h5, h6 {
-    color: white; /* Color de títulos */
+    color: white;
 }
+
 a {
-    color: #A67CBE; /* Color de enlace */
+    color: #A67CBE;
     transition: color 0.3s ease;
 }
+
 a:hover {
-    color: #FF80B5; /* Color al pasar el ratón */
+    color: #FF80B5;
 }
-/* Botones */
+
+/* Botons */
 button, .btn-primary {
-    background: linear-gradient(90deg, #EADFFF, #B09EDC);
+    background: linear-gradient(90deg, #FF80B5, #00FFFF);
     color: white;
     border-radius: 8px;
     padding: 10px 20px;
     text-transform: uppercase;
     transition: background 0.3s ease, transform 0.2s ease;
 }
+
 button:hover, .btn-primary:hover {
-    background: #B09EDC; /* Color al pasar el ratón */
-    transform: translateY(-2px); /* Efecto de elevación */
+    background: #FF80B5;
+    transform: translateY(-2px);
 }
+
 /* Planes */
 .plan {
     border-radius: 10px;
@@ -40,19 +46,64 @@ button:hover, .btn-primary:hover {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .plan:hover {
-    transform: scale(1.05); /* Efecto de escalado */
-    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5); /* Aumentar sombra */
+    transform: scale(1.05);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
 }
+
 /* Footer */
 footer {
-    background: linear-gradient(to right, #EADFFF, #B09EDC);
+    background: linear-gradient(to right, #FF80B5, #00FFFF);
     padding: 20px;
 }
-/* Animaciones */
+
+/* Carousel */
+.carousel-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+}
+
+.carousel-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.carousel-button.left {
+    left: 10px;
+}
+
+.carousel-button.right {
+    right: 10px;
+}
+
+/* Animacions */
 .animate-fade-in {
     animation: fadeIn 0.5s ease-in-out forwards;
 }
+
 @keyframes fadeIn {
     from {
         opacity: 0;
